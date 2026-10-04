@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Qualidade do Ar no Brasil</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        header {
+            background: #1e3a5f;
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.3rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #dbeafe;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            color: #1e3a5f;
+            border-bottom: 2px solid #cbd5e1;
+            padding-bottom: 8px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .card {
+            background: white;
+            padding: 18px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card strong {
+            color: #2563eb;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 16px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
+        .button.dark {
+            background: #334155;
+        }
+
+        .highlight {
+            background: #e0f2fe;
+            padding: 20px;
+            border-left: 4px solid #0284c7;
+            border-radius: 6px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            background: #1e293b;
+            color: #cbd5e1;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Qualidade do Ar no Brasil</h1>
+        <p>Análise e visualização de dados utilizando Python</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Sobre o projeto</h2>
+
+            <p>
+                Este projeto apresenta uma análise dos dados de qualidade do ar
+                em cidades brasileiras, considerando diferentes poluentes,
+                regiões, estados e períodos.
+            </p>
+
+            <p>
+                O objetivo é identificar padrões, períodos críticos e diferenças
+                entre localidades por meio de técnicas de análise e visualização
+                de dados.
+            </p>
+        </section>
+
+
+        <section>
+            <h2>Perguntas de análise</h2>
+
+            <ul>
+                <li>Quais cidades apresentam pior qualidade do ar?</li>
+                <li>Existem períodos mais críticos?</li>
+                <li>Quais poluentes apresentam maior presença?</li>
+                <li>Existe relação entre clima e poluição?</li>
+                <li>Como a qualidade do ar varia ao longo do tempo?</li>
+                <li>Quais regiões apresentam maiores índices?</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h2>Indicadores</h2>
+
+            <div class="grid">
+
+                <div class="card">
+                    <strong>Índice médio</strong>
+                    <br>
+                    Média do índice de qualidade do ar.
+                </div>
+
+                <div class="card">
+                    <strong>Cidade mais afetada</strong>
+                    <br>
+                    Cidade com maior índice médio.
+                </div>
+
+                <div class="card">
+                    <strong>Região mais afetada</strong>
+                    <br>
+                    Região com maior índice médio.
+                </div>
+
+                <div class="card">
+                    <strong>Poluente predominante</strong>
+                    <br>
+                    Poluente com maior média nos dados.
+                </div>
+
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Análises realizadas</h2>
+
+            <div class="grid">
+
+                <div class="card">
+                    <strong>Análise temporal</strong>
+                    <br>
+                    Evolução do índice ao longo dos períodos.
+                </div>
+
+                <div class="card">
+                    <strong>Períodos críticos</strong>
+                    <br>
+                    Cidades com maior número de registros "Ruim".
+                </div>
+
+                <div class="card">
+                    <strong>Comparação geográfica</strong>
+                    <br>
+                    Comparação entre diferentes cidades.
+                </div>
+
+                <div class="card">
+                    <strong>Análise de poluentes</strong>
+                    <br>
+                    Evolução de PM2.5, PM10, NO₂, CO e O₃.
+                </div>
+
+                <div class="card">
+                    <strong>Correlação</strong>
+                    <br>
+                    Relação entre poluentes, clima e qualidade do ar.
+                </div>
+
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Tecnologias</h2>
+
+            <div class="grid">
+
+                <div class="card">Python</div>
+                <div class="card">Pandas</div>
+                <div class="card">Plotly</div>
+                <div class="card">Matplotlib</div>
+                <div class="card">Seaborn</div>
+                <div class="card">Streamlit</div>
+                <div class="card">SQLAlchemy</div>
+                <div class="card">SQLite</div>
+
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Arquivos</h2>
+
+            <div class="buttons">
+
+                <a class="button" href="README.md">
+                    README
+                </a>
+
+                <a class="button dark" href="notebooks/analise_qualidade_ar.ipynb">
+                    Notebook
+                </a>
+
+                <a class="button dark" href="dados/simulacao_qualidade_ar_brasil.csv">
+                    Base de dados
+                </a>
+
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Dashboard</h2>
+
+            <div class="highlight">
+
+                <p>
+                    Explore os dados por meio de filtros, indicadores,
+                    gráficos interativos, comparações entre cidades e
+                    análise de correlação.
+                </p>
+
+                <a
+                    class="button"
+                    href="https://SEU-LINK-DO-STREAMLIT.streamlit.app/"
+                    target="_blank">
+                    Acessar Dashboard
+                </a>
+
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Banco de dados</h2>
+
+            <p>
+                Os dados tratados foram armazenados em um banco SQLite
+                utilizando SQLAlchemy. O Streamlit realiza a leitura dos
+                dados diretamente do banco para gerar as análises e
+                visualizações.
+            </p>
+        </section>
+
+
+        <section>
+            <h2>Conclusão</h2>
+
+            <p>
+                A análise permite identificar diferenças na qualidade do ar
+                entre cidades e regiões brasileiras, além de observar a
+                evolução dos indicadores e a ocorrência de períodos críticos.
+            </p>
+
+            <p>
+                O dashboard transforma os dados em uma ferramenta interativa,
+                facilitando a identificação de localidades e períodos que
+                merecem maior atenção ambiental.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        Projeto desenvolvido para fins educacionais — Análise e Visualização de Dados com Python<br>
+        Aluno: <strong>Davi Cavalcante Rodrigues Scarpelli</strong><br>
+        Professor: <strong>Alexandre Neves Louzada</strong>
+    </footer>
+
+</body>
+
+</html>
