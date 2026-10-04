@@ -8,105 +8,254 @@
     <title>Qualidade do Ar no Brasil</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #f1f5f9;
-            color: #1e293b;
+            background: #ffffff;
+            color: #334155;
         }
 
         header {
-            background: #1e3a5f;
+            background: #172554;
             color: white;
-            padding: 45px 20px;
-            text-align: center;
+            padding: 35px 20px;
+        }
+
+        .header-content {
+            max-width: 1000px;
+            margin: auto;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.3rem;
+            font-size: 2.2rem;
         }
 
         header p {
-            margin-top: 10px;
-            color: #dbeafe;
+            margin: 8px 0 0;
+            color: #bfdbfe;
         }
 
         main {
             max-width: 1000px;
-            margin: 35px auto;
-            padding: 0 20px;
+            margin: auto;
+            padding: 35px 20px;
         }
 
         section {
-            margin-bottom: 35px;
+            margin-bottom: 45px;
         }
 
         h2 {
-            color: #1e3a5f;
-            border-bottom: 2px solid #cbd5e1;
-            padding-bottom: 8px;
+            color: #172554;
+            margin-bottom: 15px;
         }
 
         p {
             line-height: 1.6;
         }
 
-        .grid {
+        /* INDICADORES */
+
+        .indicators {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(4, 1fr);
+            border: 1px solid #dbeafe;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
         }
 
-        .card {
-            background: white;
-            padding: 18px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
+        .indicator {
+            padding: 22px;
+            background: #eff6ff;
+            border-right: 1px solid #dbeafe;
         }
 
-        .card strong {
-            color: #2563eb;
+        .indicator:last-child {
+            border-right: none;
+        }
+
+        .indicator strong {
+            display: block;
+            color: #1d4ed8;
+            margin-bottom: 7px;
+        }
+
+        .indicator span {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* PERGUNTAS */
+
+        .questions {
+            background: #f8fafc;
+            padding: 25px 30px;
+            border-radius: 10px;
+        }
+
+        .questions li {
+            margin-bottom: 8px;
+        }
+
+        /* ANALISES */
+
+        .analysis {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 35px;
+        }
+
+        .analysis-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .analysis-item strong {
+            color: #172554;
+        }
+
+        /* TECNOLOGIAS */
+
+        .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 8px 13px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* ARQUIVOS */
+
+        .files {
+            background: #172554;
+            color: white;
+            padding: 28px;
+            border-radius: 10px;
+        }
+
+        .files h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .files p {
+            color: #cbd5e1;
         }
 
         .buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            margin-top: 20px;
         }
 
         .button {
             display: inline-block;
-            padding: 11px 16px;
-            background: #2563eb;
+            padding: 10px 15px;
+            background: #3b82f6;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 5px;
             font-weight: bold;
         }
 
         .button:hover {
-            background: #1d4ed8;
+            background: #2563eb;
         }
 
         .button.dark {
-            background: #334155;
+            background: #475569;
         }
 
-        .highlight {
-            background: #e0f2fe;
-            padding: 20px;
-            border-left: 4px solid #0284c7;
-            border-radius: 6px;
+        .button.dark:hover {
+            background: #64748b;
+        }
+
+        /* DASHBOARD */
+
+        .dashboard {
+            border-left: 5px solid #2563eb;
+            background: #eff6ff;
+            padding: 20px 25px;
+        }
+
+        .dashboard h2 {
+            margin-top: 0;
+        }
+
+        /* BANCO */
+
+        .database {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        /* CONCLUSAO */
+
+        .conclusion {
+            max-width: 850px;
         }
 
         footer {
-            margin-top: 50px;
-            padding: 20px;
+            margin-top: 20px;
+            padding: 25px;
             text-align: center;
-            background: #1e293b;
-            color: #cbd5e1;
-            font-size: 0.9rem;
+            background: #0f172a;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        @media (max-width: 750px) {
+
+            .indicators {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .indicator:nth-child(2) {
+                border-right: none;
+            }
+
+            .analysis {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .indicators {
+                grid-template-columns: 1fr;
+            }
+
+            .indicator {
+                border-right: none;
+                border-bottom: 1px solid #dbeafe;
+            }
+
+            .indicator:last-child {
+                border-bottom: none;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -114,9 +263,12 @@
 <body>
 
     <header>
-        <h1>Qualidade do Ar no Brasil</h1>
-        <p>Análise e visualização de dados utilizando Python</p>
+        <div class="header-content">
+            <h1>Qualidade do Ar no Brasil</h1>
+            <p>Análise e visualização de dados utilizando Python</p>
+        </div>
     </header>
+
 
     <main>
 
@@ -138,134 +290,156 @@
 
 
         <section>
-            <h2>Perguntas de análise</h2>
 
-            <ul>
-                <li>Quais cidades apresentam pior qualidade do ar?</li>
-                <li>Existem períodos mais críticos?</li>
-                <li>Quais poluentes apresentam maior presença?</li>
-                <li>Existe relação entre clima e poluição?</li>
-                <li>Como a qualidade do ar varia ao longo do tempo?</li>
-                <li>Quais regiões apresentam maiores índices?</li>
-            </ul>
-        </section>
+            <h2>Principais indicadores</h2>
 
+            <div class="indicators">
 
-        <section>
-            <h2>Indicadores</h2>
-
-            <div class="grid">
-
-                <div class="card">
+                <div class="indicator">
                     <strong>Índice médio</strong>
-                    <br>
-                    Média do índice de qualidade do ar.
+                    <span>Média do índice de qualidade do ar.</span>
                 </div>
 
-                <div class="card">
+                <div class="indicator">
                     <strong>Cidade mais afetada</strong>
-                    <br>
-                    Cidade com maior índice médio.
+                    <span>Cidade com maior índice médio.</span>
                 </div>
 
-                <div class="card">
+                <div class="indicator">
                     <strong>Região mais afetada</strong>
-                    <br>
-                    Região com maior índice médio.
+                    <span>Região com maior índice médio.</span>
                 </div>
 
-                <div class="card">
+                <div class="indicator">
                     <strong>Poluente predominante</strong>
-                    <br>
-                    Poluente com maior média nos dados.
+                    <span>Poluente com maior média nos dados.</span>
                 </div>
 
             </div>
+
         </section>
 
 
         <section>
+
+            <h2>Perguntas de análise</h2>
+
+            <div class="questions">
+
+                <ul>
+                    <li>Quais cidades apresentam pior qualidade do ar?</li>
+                    <li>Existem períodos mais críticos?</li>
+                    <li>Quais poluentes apresentam maior presença?</li>
+                    <li>Existe relação entre clima e poluição?</li>
+                    <li>Como a qualidade do ar varia ao longo do tempo?</li>
+                    <li>Quais regiões apresentam maiores índices?</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
             <h2>Análises realizadas</h2>
 
-            <div class="grid">
+            <div class="analysis">
 
-                <div class="card">
+                <div class="analysis-item">
                     <strong>Análise temporal</strong>
                     <br>
                     Evolução do índice ao longo dos períodos.
                 </div>
 
-                <div class="card">
+                <div class="analysis-item">
                     <strong>Períodos críticos</strong>
                     <br>
                     Cidades com maior número de registros "Ruim".
                 </div>
 
-                <div class="card">
+                <div class="analysis-item">
                     <strong>Comparação geográfica</strong>
                     <br>
                     Comparação entre diferentes cidades.
                 </div>
 
-                <div class="card">
+                <div class="analysis-item">
                     <strong>Análise de poluentes</strong>
                     <br>
                     Evolução de PM2.5, PM10, NO₂, CO e O₃.
                 </div>
 
-                <div class="card">
+                <div class="analysis-item">
                     <strong>Correlação</strong>
                     <br>
                     Relação entre poluentes, clima e qualidade do ar.
                 </div>
 
             </div>
+
         </section>
 
 
         <section>
-            <h2>Tecnologias</h2>
 
-            <div class="grid">
+            <h2>Tecnologias utilizadas</h2>
 
-                <div class="card">Python</div>
-                <div class="card">Pandas</div>
-                <div class="card">Plotly</div>
-                <div class="card">Matplotlib</div>
-                <div class="card">Seaborn</div>
-                <div class="card">Streamlit</div>
-                <div class="card">SQLAlchemy</div>
-                <div class="card">SQLite</div>
-
+            <div class="technologies">
+                <span class="tech">Python</span>
+                <span class="tech">Pandas</span>
+                <span class="tech">Plotly</span>
+                <span class="tech">Matplotlib</span>
+                <span class="tech">Seaborn</span>
+                <span class="tech">Streamlit</span>
+                <span class="tech">SQLAlchemy</span>
+                <span class="tech">SQLite</span>
             </div>
+
         </section>
 
 
-        <section>
-            <h2>Arquivos</h2>
+        <section class="files">
+
+            <h2>Arquivos do projeto</h2>
+
+            <p>
+                Acesse o README, o notebook utilizado na análise e a base
+                de dados do projeto.
+            </p>
 
             <div class="buttons">
 
-                <a class="button" href="https://github.com/ScarpelliDavi/qualidade-ar-brasil/blob/main/README.md">
+                <a
+                    class="button"
+                    href="https://github.com/ScarpelliDavi/qualidade-ar-brasil/blob/main/README.md"
+                    target="_blank">
                     README
                 </a>
 
-                <a class="button dark" href="https://github.com/ScarpelliDavi/qualidade-ar-brasil/blob/main/notebooks/analise_qualidade_ar.ipynb">
+                <a
+                    class="button dark"
+                    href="https://github.com/ScarpelliDavi/qualidade-ar-brasil/blob/main/notebooks/analise_qualidade_ar.ipynb"
+                    target="_blank">
                     Notebook
                 </a>
 
-                <a class="button dark" href="dados/simulacao_qualidade_ar_brasil.csv">
+                <a
+                    class="button dark"
+                    href="dados/simulacao_qualidade_ar_brasil.csv">
                     Base de dados
                 </a>
 
             </div>
+
         </section>
 
 
         <section>
-            <h2>Dashboard</h2>
 
-            <div class="highlight">
+            <div class="dashboard">
+
+                <h2>Dashboard</h2>
 
                 <p>
                     Explore os dados por meio de filtros, indicadores,
@@ -281,22 +455,30 @@
                 </a>
 
             </div>
+
         </section>
 
 
         <section>
-            <h2>Banco de dados</h2>
 
-            <p>
-                Os dados tratados foram armazenados em um banco SQLite
-                utilizando SQLAlchemy. O Streamlit realiza a leitura dos
-                dados diretamente do banco para gerar as análises e
-                visualizações.
-            </p>
+            <div class="database">
+
+                <h2>Banco de dados</h2>
+
+                <p>
+                    Os dados tratados foram armazenados em um banco SQLite
+                    utilizando SQLAlchemy. O Streamlit realiza a leitura dos
+                    dados diretamente do banco para gerar as análises e
+                    visualizações.
+                </p>
+
+            </div>
+
         </section>
 
 
-        <section>
+        <section class="conclusion">
+
             <h2>Conclusão</h2>
 
             <p>
@@ -310,14 +492,24 @@
                 facilitando a identificação de localidades e períodos que
                 merecem maior atenção ambiental.
             </p>
+
         </section>
 
     </main>
 
+
     <footer>
-        Projeto desenvolvido para fins educacionais — Análise e Visualização de Dados com Python<br>
-        Aluno: <strong>Davi Cavalcante Rodrigues Scarpelli</strong><br>
-        Professor: <strong>Alexandre Neves Louzada</strong>
+
+        Projeto desenvolvido para fins educacionais —
+        Análise e Visualização de Dados com Python<br>
+
+        Aluno:
+        <strong>Davi Cavalcante Rodrigues Scarpelli</strong>
+        <br>
+
+        Professor:
+        <strong>Alexandre Neves Louzada</strong>
+
     </footer>
 
 </body>
