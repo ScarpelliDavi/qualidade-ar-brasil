@@ -221,7 +221,7 @@ O banco permite que o dashboard carregue os dados de forma persistente, separand
 https://github.com/ScarpelliDavi/qualidade-ar-brasil.git
 
 **Dashboard:**  
-COLE-AQUI-O-LINK-DO-STREAMLIT
+https://qualidade-ar-brasil-g1-davi.streamlit.app/
 
 **GitHub Pages:**  
 COLE-AQUI-O-LINK-DO-GITHUB-PAGES
