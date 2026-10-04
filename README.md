@@ -59,7 +59,7 @@ A análise busca responder às seguintes perguntas:
 ## 4. Estrutura do projeto
 
 ```text
-qualidade-ar-brasil/
+projeto-g1/
 |
 |-- README.md
 |-- requirements.txt
@@ -84,7 +84,7 @@ qualidade-ar-brasil/
 
 ```bash
 git clone https://github.com/ScarpelliDavi/qualidade-ar-brasil.git
-cd qualidade-ar-brasil
+cd projeto-g1
 ```
 
 ### 5.2 Instalar as dependências
@@ -224,7 +224,7 @@ https://github.com/ScarpelliDavi/qualidade-ar-brasil.git
 https://qualidade-ar-brasil-g1-davi.streamlit.app/
 
 **GitHub Pages:**  
-COLE-AQUI-O-LINK-DO-GITHUB-PAGES
+https://scarpellidavi.github.io/qualidade-ar-brasil/
 
 ---
 
