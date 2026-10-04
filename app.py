@@ -148,7 +148,9 @@ poluente_predominante = (
     .idxmax()
 )
 
-col1, col2, col3, col4 = st.columns(4)
+media_pm25 = df_filtro["pm25"].mean()
+
+col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
     st.metric(
@@ -174,6 +176,12 @@ with col4:
         poluente_predominante.upper()
     )
 
+with col5:
+    st.metric(
+        "Média de PM 2.5",
+        f"{media_pm25:.2f}"
+    )
+
 aba1, aba2, aba3, aba4, aba5 = st.tabs([
     "Visão Geral",
     "Análise por ocorrências críticas",
@@ -187,6 +195,21 @@ aba1, aba2, aba3, aba4, aba5 = st.tabs([
 # Linha 1: Evolução temporal por mês
 
 with aba1:
+
+    st.subheader("Significado dos poluentes")
+
+    poluentes_info = pd.DataFrame({
+        "Sigla": ["PM2.5", "PM10", "NO₂", "CO", "O₃"],
+        "Significado": [
+            "Material particulado fino",
+            "Material particulado inalável",
+            "Dióxido de nitrogênio",
+            "Monóxido de carbono",
+            "Ozônio"
+        ]
+    })
+
+    st.table(poluentes_info)
 
     st.subheader("Evolução Mensal da Qualidade do Ar")
 
