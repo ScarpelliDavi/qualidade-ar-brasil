@@ -67,13 +67,13 @@ qualidade-ar-brasil/
 |-- index.html
 |
 |-- dados/
-|   |-- qualidade_ar_brasil.csv
+|   |-- simulacao_qualidade_ar_brasil.csv
 |
 |-- database/
 |   |-- qualidade_ar_brasil.sqlite
 |
-|-- notebook/
-|   |-- analise.ipynb
+|-- notebooks/
+|   |-- analise_qualidade_ar.ipynb
 ```
 
 ---
@@ -243,6 +243,6 @@ O projeto permite identificar:
 Essas informações podem auxiliar gestores e órgãos responsáveis pelo monitoramento ambiental a identificar regiões e períodos que exigem maior atenção, além de contribuir para o planejamento de ações de controle e redução da poluição atmosférica.
 
 Aluno: Davi Cavalcante Rodrigues Scarpelli 
-Professor: Alexandre Neves Louzada") 
+Professor: Alexandre Neves Louzada"
 
 ---
