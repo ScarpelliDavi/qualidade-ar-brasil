@@ -196,6 +196,28 @@ aba1, aba2, aba3, aba4, aba5 = st.tabs([
 
 with aba1:
 
+    st.subheader("Contextualização geral")
+
+    st.write("""
+    Este projeto tem como objetivo analisar os dados sobre a qualidade do ar em diversos estados do Brasil,
+    identificando padrões e tendências relevantes.
+    - **A partir disso, o projeto deseja responder as seguintes perguntas:**
+
+    - Quais cidades apresentam pior qualidade do ar? 
+
+    - Existem períodos mais críticos? 
+
+    - Quais poluentes são mais frequentes?
+
+    - Existe relação entre clima e poluição?
+
+    - Há melhora ou piora da qualidade do ar ao longo do tempo?
+
+    - Quais regiões apresentam maior concentração de poluentes?
+
+    - Quais cidades exigem maior atenção ambiental?
+    """)  
+
     st.subheader("Significado dos poluentes")
 
     poluentes_info = pd.DataFrame({
@@ -415,5 +437,4 @@ st.divider()
 st.subheader("Conclusão executiva")
 st.write("""
 A análise permite identificar quais regiões, estados e cidades possuem os índices de poluição mais preocupantes. O dashboard transforma os dados de qualidade do ar em um sistema de apoio à tomada de decisão, permitindo que órgãos responsáveis possam observar e entender quais lugares devem receber mais atenção no combate à poluição da atmosfera
-Professor: Alexandre Neves Louzada
 """)   
