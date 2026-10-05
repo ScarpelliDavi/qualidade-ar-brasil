@@ -277,35 +277,28 @@ with aba2:
 
     st.subheader("Cidades com mais ocorrencias de qualidade do ar em estado crítico")
 
-    periodos_criticos_cidades = (
+    cidades_criticas = (
         df_filtro[df_filtro["nivel_qualidade"] == "Ruim"]
         .groupby("cidade")
         .size()
         .sort_values(ascending=False)
         .head(10)
-        .reset_index(name="ocorrencias")
     )
 
-    fig = px.bar(
-        periodos_criticos_cidades,
-        x="ocorrencias",
-        y="cidade",
-        orientation="h",
-        text="ocorrencias"
-    )
+    fig, ax = plt.subplots(figsize=(10, 5))
 
-    fig.update_layout(
-        xaxis_title="Número de ocorrências",
-        yaxis_title="Cidade"
-    )
+    cidades_criticas.sort_values().plot(kind="barh", ax=ax)
 
-    fig.update_yaxes(autorange="reversed")
+    ax.set_title("10 Cidades com Mais Períodos de Qualidade do Ar Ruim", fontweight="bold", fontsize=12)
+    ax.set_xlabel("Quantidade de períodos")
+    ax.set_ylabel("Cidade")
 
-    fig.update_traces(
-        textposition="outside"
-    )
+    x = cidades_criticas.sort_values().plot(kind="barh")
 
-    st.plotly_chart(fig, use_container_width=True)
+    for i, valor in enumerate(cidades_criticas.sort_values()):
+        x.text(valor + 0.1, i, f"{valor}", va="center", fontsize=10)
+
+    st.pyplot(fig)
 
     st.info("A partir desse gráfico podemos realizar uma análise com base nas ocorrências críticas de poluição do ar registradas durante o período")
 
